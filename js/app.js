@@ -29,7 +29,7 @@ $(document).ready(function startGame(){
   	$("#guessForm").submit(function(e){
   		e.preventDefault();//this is to prevent from refreshing the page when we click on the button
   		enterAGuess(); //can i just call the function enterAGuess instead of writing the function (){enterAGuess}
-  		alert("Test");
+  		//alert("Test");
   	});
 
   	
@@ -44,16 +44,15 @@ function enterAGuess (){
   		alert("You did it!");
   		$("h2").text("You Won!");
   	}
-  	else if (){
-  		hotOrColdCheck;
+  	else {
+	  	checkIceCold();
   	}
 }
 
-function checkIceCold(){
-	iceColdNum = randomNum+50
-	if (inputNumber >= iceColdNum) {
-		alert("Ice Cold");
-		$("h2").text("Ice Cold");
-	}
+ function checkIceCold(){
+ 	var iceColdNum = randomNum + 1
+		if (inputNumber >= iceColdNum || inputNumber <= iceColdNum) {
+			alert("Ice Cold");
+			$("h2").text("Ice Cold");
+		}
 }
-
