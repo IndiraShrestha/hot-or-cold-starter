@@ -43,16 +43,35 @@ function enterAGuess (){
   	if (inputNumber == randomNum){
   		alert("You did it!");
   		$("h2").text("You Won!");
-  	}
-  	else {
+  	} else if {
 	  	checkIceCold();
+  	} else if {
+  		checkCold();
+  	} else {
+  		checkHot();
   	}
 }
 
  function checkIceCold(){
- 	var iceColdNum = randomNum + 1
+ 	var iceColdNum = randomNum + 50
 		if (inputNumber >= iceColdNum || inputNumber <= iceColdNum) {
 			alert("Ice Cold");
 			$("h2").text("Ice Cold");
+		}
+}
+
+function checkCold(){
+ 	var coldNum = randomNum + 30
+		if (inputNumber >= coldNum || inputNumber <= coldNum) {
+			alert("Cold");
+			$("h2").text("Cold");
+		}
+}
+
+function checkHot(){
+ 	var hotNum = randomNum + 10
+		if (inputNumber >= hotNum || inputNumber <= hotNum) {
+			alert("Hot");
+			$("h2").text("Hot");
 		}
 }
