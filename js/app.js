@@ -42,14 +42,14 @@ var inputNumber = $("#userGuess").val();
 function enterAGuess (){
   	if (inputNumber == randomNum){
   		alert("You did it!");
-  		$("h2").text("You Won!");
-  	} else if {
-	  	checkIceCold();
-  	} else if {
-  		checkCold();
-  	} else {
-  		checkHot();
-  	}
+  		return $("h2").text("You Won!");
+  	} 
+	  	return checkIceCold();
+  	
+  	 	return checkCold();
+  	
+  	 	return checkHot();
+  	
 }
 
  function checkIceCold(){
