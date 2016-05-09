@@ -27,7 +27,7 @@ $(document).ready(function startGame(){
   	function makeARandomNum(){
   		/*----- by removing var in the randomNum I am setting a global variable in it. Had it had var randomNum in it, it would be local var------*/
   		randomNum = Math.floor(Math.random()*100)  + 1;
-  		console.log(randomNum);
+  		console.log("The random number generate is " + randomNum);
   	}
 
   	/*------- add the click handler -----------*/
@@ -45,13 +45,12 @@ $(document).ready(function startGame(){
   		//alert("Test");
   	});
   	makeARandomNum(1,100);
-    
-
+  
   /*----------- validating the user input -------------*/
   function validateNum(numberToBeValidated){
     if (numberToBeValidated % 1 != 0){
       alert("Please input an integer");
-      return false;
+      return false; //the function will have false value if the if condition is true
     }
     else if (numberToBeValidated < 0 || numberToBeValidated > 100){
       alert("Please input the number between the range of 1 and 100");
@@ -60,7 +59,6 @@ $(document).ready(function startGame(){
     clearText();
     // else if for past guesses ask Casey for help about the past guesses else if 
   }  
-
 
   /*----------- defining the function for calculation of hot and cold app--------*/
   function enterAGuess(guessedNumbered){
